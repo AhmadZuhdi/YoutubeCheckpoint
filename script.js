@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Youtube Checkpoint
-// @namespace    http://your.homepage/
+// @namespace    https://github.com/AhmadZuhdi/YoutubeCheckpoint
 // @version      0.1
-// @description  enter something useful
+// @description  Resume youtube from last time visit
 // @author       AhmadZuhdi
 // @require		 http://code.jquery.com/jquery-2.1.3.min.js
 // @require 	 https://raw.github.com/lodash/lodash-compat/3.1.0/lodash.min.js
+// @require      http://momentjs.com/downloads/moment.min.js
 // @match        https://www.youtube.com/watch*
 // @grant        none
 // ==/UserScript==
@@ -90,9 +91,13 @@
             
 			app.data[app.get.v] = app.youtube.getCurrentTime()
             
-         	localStorage.setItem('ytcp', JSON.stringify(app.data))
+            console.log(app.data)
+
+            console.log($('eow-title').text())
+
+         	// localStorage.setItem('ytcp', JSON.stringify(app.data))
             
-            // return 'test'
+            return 'test'
             	
         }
         
